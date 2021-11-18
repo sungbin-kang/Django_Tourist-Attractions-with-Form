@@ -2,6 +2,10 @@
 
 Trouist Attraction web app is built to help the local travel agency to keep up with all the new attractions being added all over country. You can add, update, delete and view attractions to the list. 
 
+## Requirement
+
+This app requires Django. Please check "requirement.txt" for other required packages.
+
 ## Skills Used in Project
 <ul>
     <li>Django
