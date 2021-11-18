@@ -8,20 +8,6 @@
 {% block content %}
 <h1>This is a list of some attractions in America!</h1>
 
-<!-- <table>
-  <tr>
-    <th>Attraction</th>
-    <th>State</th>
-    <th>State Details</th>
-  </tr>
-  {% for item in attractions|dictsort:'homeState.stateName' %}
-  <tr>
-    <td>{{ item.attractionName }}</td>
-    <td>{{ item.homeState }}</td>
-    <td><a href="{% url 'details' item.homeState|slugify %}">State Details</a></td>
-    </tr>
-    {% endfor %}
-</table> -->
 <ul class="responsive-table">
   <li class="table-header">
     <div class="col col-1">Attraction</div>
