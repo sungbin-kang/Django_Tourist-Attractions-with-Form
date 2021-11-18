@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-
+{% load static %}
 <head>
   {% block head %}
   {% endblock %}
 </head>
 
 <body>
-  <a href="{% url 'home' %}"><h2>Take me home</h2></a>
+  <!-- <a href="{% url 'home' %}"><h2>Take me home</h2></a> -->
+  <a href="{% url 'home' %}">
+    <img src="{% static '/img/home_icon.png' %}" alt="Take me home" />
+  </a>
   {% block content %}
   {% endblock %}
 </body>
