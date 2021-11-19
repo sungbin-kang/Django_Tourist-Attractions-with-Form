@@ -54,16 +54,16 @@ table, th, td {
     flex-basis: 20%;
   }
   
-   button {
+  .home_button {
      color: #ffffff;
      font-size: 15px;
      background-color: #669692;
      border-radius: 8px;
      padding: 15px;
-     margin-left: 20px;
+     margin-left: 40px;
      box-shadow: 2px 2px 2px #255a56;
    }
 
-   button:hover {
+   .home_button:hover {
     background-color: #255a56
    }

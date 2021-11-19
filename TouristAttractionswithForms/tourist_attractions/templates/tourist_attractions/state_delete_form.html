@@ -1,7 +1,18 @@
 {% extends 'tourist_attractions/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<p>This is state delete form</p>
+<h2>Are you sure you want to delete {{ object }}?</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes">
+    <a href="{% url 'state_update' object.id%}"><button type="button">No</button></a>
+</form>
 
 {% endblock content %}

@@ -6,12 +6,13 @@
 {% endblock %}
 
 {% block content %}
-<p>Please Update {{ object }} Information</p>
+<h2>Please Update {{ object }} Information</h2>
 
 <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Update">
+    <a href="{% url 'state_delete' object.id %}"><button type="button">Delete</button></a>
 </form>
 
 {% endblock content %}

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import State, Attraction
 from .forms import StateForm, AttractionForm
-from django.views.generic import CreateView, UpdateView, DeleteView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 def home(request):
   all_attractions = Attraction.objects.all()
@@ -26,6 +26,7 @@ class StateUpdate(UpdateView):
 class StateDelete(DeleteView):
   model = State
   template_name = "tourist_attractions/state_delete_form.html"
+  success_url = "/"
   
 
 class AttractionCreate(CreateView):
@@ -41,4 +42,5 @@ class AttractionUpdate(UpdateView):
 class AttractionDelete(DeleteView):
   model = Attraction
   template_name = "tourist_attractions/attraction_delete_form.html"
+  success_url = "/"
   

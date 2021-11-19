@@ -8,18 +8,19 @@
 {% block content %}
 <h1>This is a list of tourist attractions for {{ statename|title }}!</h1>
 
-<table>
-    <tr>
-        <th>Attraction</th>
-        <th>State</th>
-    </tr>
-    {% for item in attractions|dictsort:'homeState' %}
+<ul class="responsive-table">
+  <li class="table-header">
+    <div class="col col-1">Attraction</div>
+    <div class="col col-2">State</div>
+  </li>
+  {% for item in attractions|dictsort:'homeState' %}
     {% if item.homeState|lower == statename %}
-    <tr>
-        <td>{{ item.attractionName }}</td>
-        <td>{{ item.homeState }}</td>
-    </tr>
+      <li class="table-row">
+        <div class="col col-1" data-label="Attraction">{{ item.attractionName }}</div>
+        <div class="col col-2" data-label="State"><a href="{% url 'state_update' item.id %}">{{ item.homeState }}</a></div>
     {% endif %}
-    {% endfor %}
-</table>
+  {% endfor %}
+</ul>
+
+
 {% endblock %}
