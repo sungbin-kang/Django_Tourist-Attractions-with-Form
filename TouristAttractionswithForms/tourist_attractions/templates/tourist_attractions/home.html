@@ -17,7 +17,7 @@
   {% for item in attractions|dictsort:'homeState.stateName' %}
   <li class="table-row">
     <div class="col col-1" data-label="Attraction">{{ item.attractionName }}</div>
-    <div class="col col-2" data-label="State">{{ item.homeState }}</div>
+    <div class="col col-2" data-label="State"><a href="{% url 'state_update' item.id %}">{{ item.homeState }}</a></div>
     <div class="col col-3" data-label="State Details"><a href="{% url 'details' item.homeState|slugify %}">State Details</a></div>
   </li>
   {% endfor %}
