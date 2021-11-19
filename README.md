@@ -26,7 +26,7 @@ This app requires Django. Please check "requirement.txt" for other required pack
 ## How to Use This App
 
 ### Home Page
-<img src="img/Home-Page.png">
+<img src="img/Home-Page.png" width="50%">
 
 ### Create State
 Click on "Add State" button to start creating a state, and fill out the form.
