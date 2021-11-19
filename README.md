@@ -25,12 +25,25 @@ This app requires Django. Please check "requirement.txt" for other required pack
 
 ## How to Use This App
 
+### Home Page
+<img src="img/Home-Page.png">
+
 ### Create State
+Click on "Add State" button to start creating a state, and fill out the form.
+<img src="img/Create-State.png">
 
 ### Create Attraction
+Click on "Add Attraction" button to start creating an attraction, and fill out the form.
+<img src="img/Create-Attraction.png">
 
 ### Update State/Attraction
+Click on hyper link on the state or attraction that you would like to update, and hit "Update" button.
+<img src="img/Update-State.png">
 
 ### Delete State/Attraciton
+Click on hyper linke of the state of attraction that you would like to delete, and hit "Delete" button.
+<img src="img/Delete-State.png">
 
 ### See Details of State
+Click on hyper link "State Details" to view the list of attraction of desired state.
+<img src="img/See-Details-of-State.png">
