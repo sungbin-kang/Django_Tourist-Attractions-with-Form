@@ -25,4 +25,12 @@ This app requires Django. Please check "requirement.txt" for other required pack
 
 ## How to Use This App
 
-###
+### Create State
+
+### Create Attraction
+
+### Update State/Attraction
+
+### Delete State/Attraciton
+
+### See Details of State
