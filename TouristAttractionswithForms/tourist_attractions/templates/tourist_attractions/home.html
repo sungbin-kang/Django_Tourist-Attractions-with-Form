@@ -2,24 +2,33 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
 {% endblock %}
 
 {% block content %}
 <h1>This is a list of some attractions in America!</h1>
 
-<table>
-  <tr>
-    <th>Attraction</th>
-    <th>State</th>
-    <th>State Details</th>
-  </tr>
+<ul class="responsive-table">
+  <li class="table-header">
+    <div class="col col-1">Attraction</div>
+    <div class="col col-2">State</div>
+    <div class="col col-3">State Details</div>
+  </li>
   {% for item in attractions|dictsort:'homeState.stateName' %}
-  <tr>
-    <td>{{ item.attractionName }}</td>
-    <td>{{ item.homeState }}</td>
-    <td><a href="{% url 'details' item.homeState|slugify %}">State Details</a></td>
-    </tr>
-    {% endfor %}
-</table>
+  <li class="table-row">
+    <div class="col col-1" data-label="Attraction"><a href="{% url 'attraction_update' item.id %}">{{ item.attractionName }}</a></div>
+    <div class="col col-2" data-label="State"><a href="{% url 'state_update' item.homeState.id %}">{{ item.homeState }}</a></div>
+    <div class="col col-3" data-label="State Details"><a href="{% url 'details' item.homeState|slugify %}">State Details</a></div>
+  </li>
+  {% endfor %}
+</ul>
+
+
+<a href="{% url 'state_create' %}">
+    <button class="home_button">Add State</button>
+</a>
+<a href="{% url 'attraction_create' %}">
+  <button class="home_button">Add Attraction</button>
+</a>
+
+
 {% endblock %}

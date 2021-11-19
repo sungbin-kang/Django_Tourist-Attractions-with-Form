@@ -1,0 +1,14 @@
+{% extends 'tourist_attractions/base.html' %}
+
+{% block content %}
+
+<h2>Are you sure you want to delete {{ object }}?</h2>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Yes">
+    <a href="{% url 'attraction_update' object.id %}"><button type="button">No</button></a>
+</form>
+
+{% endblock content %}

@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-
+{% load static %}
 <head>
+  <link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
   {% block head %}
   {% endblock %}
 </head>
 
 <body>
-  <a href="{% url 'home' %}"><h2>Take me home</h2></a>
+  <a href="{% url 'home' %}">
+    <img src="{% static 'tourist_attractions/img/home_icon.png' %}" alt="Take me home" height=30px width=30px/>
+  </a>
   {% block content %}
   {% endblock %}
 </body>
