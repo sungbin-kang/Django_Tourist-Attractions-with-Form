@@ -1,11 +1,17 @@
 {% extends 'tourist_attractions/base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'tourist_attractions/style.css' %}">
+{% endblock %}
 
 {% block content %}
 <p>Please Update {{ object }} Information</p>
 
-<form action="" method="post">
+<form method="post">
     {% csrf_token %}
     {{ form.as_p }}
+    <input type="submit" value="Update">
 </form>
 
 {% endblock content %}

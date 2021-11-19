@@ -22,7 +22,6 @@ class StateUpdate(UpdateView):
   model = State
   template_name = "tourist_attractions/state_update_form.html"
   form_class = StateForm
-  extra_context = {"attractions" :Attraction.objects.all() }
 
 class StateDelete(DeleteView):
   model = State

@@ -22,23 +22,4 @@
     {% endif %}
     {% endfor %}
 </table>
-
-
-<!-- <ul class="responsive-table">
-    <li class="table-header">
-      <div class="col col-1">Attraction</div>
-      <div class="col col-2">State</div>
-    </li>
-    {% for item in attractions|dictsort:'homeState' %}
-    {% if item.homeState|lower == statename %}
-    <li class="table-row">
-      <div class="col col-1" data-label="Attraction">{{ item.attractionName }}</div>
-      <div class="col col-2" data-label="State">{{ item.homeState }}</div>
-    </li>
-    {% endif %}
-    {% endfor %}
-  </ul> -->
-
-
-
 {% endblock %}
